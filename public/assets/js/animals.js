@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 const $animalForm = document.querySelector('#animals-form');
 const $displayArea = document.querySelector('#display-area');
 
@@ -76,3 +79,10 @@ const handleGetAnimalsSubmit = event => {
 $animalForm.addEventListener('submit', handleGetAnimalsSubmit);
 
 getAnimals();
+
+module.exports = {
+  filterByQuery,
+  findById,
+  createNewAnimal,
+  validateAnimal
+};
